@@ -63,6 +63,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -76,6 +77,124 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icnAmrArmsLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAmrArmsSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAmrChestLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAmrChestSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAmrHeadLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAmrHeadSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAmrLegsLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAmrLegsSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAmrWaistLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAmrWaistSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnGenders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnGendersFemale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnGendersFemaleCentered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnGendersMale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnGendersMaleCentered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnBowLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnBowSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnDualBladesLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnDualBladesSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnGreatSwordLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnGreatSwordSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnGunlanceLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnGunlanceSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnHammerLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnHammerSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnHeavyBowgunLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnHeavyBowgunSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnHuntingHornLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnHuntingHornSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnLanceLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnLanceSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnLightBowgunLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnLightBowgunSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnLongSwordLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnLongSwordSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnSwitchAxeLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnSwitchAxeSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnSword&amp;ShieldLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnWpnSword&amp;ShieldSmall.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

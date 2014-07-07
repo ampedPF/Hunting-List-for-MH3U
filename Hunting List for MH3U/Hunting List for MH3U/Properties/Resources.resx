@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,127 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icnAmrArmsLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrArmsLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnAmrArmsSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrArmsSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnAmrChestLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrChestLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnAmrChestSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrChestSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnAmrHeadLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrHeadLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnAmrHeadSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrHeadSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnAmrLegsLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrLegsLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnAmrLegsSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrLegsSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnAmrWaistLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrWaistLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnAmrWaistSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnAmrWaistSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnGenders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnGenders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnGendersFemale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnGendersFemale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnGendersFemaleCentered" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnGendersFemaleCentered.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnGendersMale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnGendersMale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnGendersMaleCentered" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnGendersMaleCentered.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnBowLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnBowLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnBowSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnBowSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnDualBladesLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnDualBladesLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnDualBladesSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnDualBladesSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnGreatSwordLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnGreatSwordLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnGreatSwordSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnGreatSwordSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnGunlanceLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnGunlanceLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnGunlanceSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnGunlanceSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnHammerLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnHammerLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnHammerSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnHammerSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnHeavyBowgunLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnHeavyBowgunLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnHeavyBowgunSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnHeavyBowgunSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnHuntingHornLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnHuntingHornLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnHuntingHornSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnHuntingHornSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnLanceLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnLanceLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnLanceSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnLanceSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnLightBowgunLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnLightBowgunLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnLightBowgunSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnLightBowgunSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnLongSwordLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnLongSwordLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnLongSwordSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnLongSwordSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnSwitchAxeLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnSwitchAxeLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnSwitchAxeSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnSwitchAxeSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnSword&amp;ShieldLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnSword&amp;ShieldLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnWpnSword&amp;ShieldSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnWpnSword&amp;ShieldSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
