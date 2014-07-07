@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3d677d8c878a4c79ba9adf4ee19411ce" Name="Diagram1">
+        <EntityTypeShape EntityType="mh3uModel.DB_Amr" Width="1.5" PointX="0.875" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mh3uModel.DB_Itm" Width="1.5" PointX="6.875" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mh3uModel.DB_Itm_Amr" Width="1.5" PointX="3.875" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mh3uModel.DB_Itm_Wpn" Width="1.5" PointX="9.875" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mh3uModel.DB_Wpn" Width="1.5" PointX="12.875" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mh3uModel.ID_Amr_Name" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mh3uModel.ID_Itm_Name" Width="1.5" PointX="6.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mh3uModel.ID_Wpn_Name" Width="1.5" PointX="12.875" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="mh3uModel.DB_AmrDB_Itm_Amr" />
+        <AssociationConnector Association="mh3uModel.DB_AmrID_Amr_Name" />
+        <AssociationConnector Association="mh3uModel.DB_ItmDB_Itm_Amr" />
+        <AssociationConnector Association="mh3uModel.DB_ItmDB_Itm_Wpn" />
+        <AssociationConnector Association="mh3uModel.DB_ItmID_Itm_Name" />
+        <AssociationConnector Association="mh3uModel.DB_WpnDB_Itm_Wpn" />
+        <AssociationConnector Association="mh3uModel.DB_WpnID_Wpn_Name" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

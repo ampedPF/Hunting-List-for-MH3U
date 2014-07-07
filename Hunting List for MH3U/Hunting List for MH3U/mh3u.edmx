@@ -1,0 +1,787 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="mh3uModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="mh3uModelStoreContainer">
+          <EntitySet Name="DB_Amr" EntityType="mh3uModel.Store.DB_Amr" store:Type="Tables" store:Name="DB_Amr">
+            <DefiningQuery>SELECT 
+            [DB_Amr].[Amr_ID] AS [Amr_ID], 
+            [DB_Amr].[Amr_BG] AS [Amr_BG], 
+            [DB_Amr].[Amr_MF] AS [Amr_MF], 
+            [DB_Amr].[Amr_Rare] AS [Amr_Rare], 
+            [DB_Amr].[Amr_Part] AS [Amr_Part], 
+            [DB_Amr].[Amr_Slot] AS [Amr_Slot], 
+            [DB_Amr].[Def] AS [Def], 
+            [DB_Amr].[Def_Max] AS [Def_Max], 
+            [DB_Amr].[Price] AS [Price], 
+            [DB_Amr].[Res_Fire] AS [Res_Fire], 
+            [DB_Amr].[Res_Water] AS [Res_Water], 
+            [DB_Amr].[Res_Ice] AS [Res_Ice], 
+            [DB_Amr].[Res_Thunder] AS [Res_Thunder], 
+            [DB_Amr].[Res_Dragon] AS [Res_Dragon]
+            FROM [DB_Amr] AS [DB_Amr]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DB_Itm" EntityType="mh3uModel.Store.DB_Itm" store:Type="Tables" store:Name="DB_Itm">
+            <DefiningQuery>SELECT 
+            [DB_Itm].[Itm_ID] AS [Itm_ID], 
+            [DB_Itm].[Itm_Rare] AS [Itm_Rare], 
+            [DB_Itm].[Itm_Max] AS [Itm_Max], 
+            [DB_Itm].[Itm_Sell] AS [Itm_Sell], 
+            [DB_Itm].[Itm_Buy] AS [Itm_Buy]
+            FROM [DB_Itm] AS [DB_Itm]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DB_Itm_Amr" EntityType="mh3uModel.Store.DB_Itm_Amr" store:Type="Tables" store:Name="DB_Itm_Amr">
+            <DefiningQuery>SELECT 
+            [DB_Itm_Amr].[ID] AS [ID], 
+            [DB_Itm_Amr].[Amr_ID] AS [Amr_ID], 
+            [DB_Itm_Amr].[Itm_ID] AS [Itm_ID], 
+            [DB_Itm_Amr].[Quant] AS [Quant]
+            FROM [DB_Itm_Amr] AS [DB_Itm_Amr]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DB_Itm_Wpn" EntityType="mh3uModel.Store.DB_Itm_Wpn" store:Type="Tables" store:Name="DB_Itm_Wpn">
+            <DefiningQuery>SELECT 
+            [DB_Itm_Wpn].[ID] AS [ID], 
+            [DB_Itm_Wpn].[Wpn_ID] AS [Wpn_ID], 
+            [DB_Itm_Wpn].[Itm_ID] AS [Itm_ID], 
+            [DB_Itm_Wpn].[Quant] AS [Quant], 
+            [DB_Itm_Wpn].[Type] AS [Type], 
+            [DB_Itm_Wpn].[Region] AS [Region]
+            FROM [DB_Itm_Wpn] AS [DB_Itm_Wpn]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DB_Wpn" EntityType="mh3uModel.Store.DB_Wpn" store:Type="Tables" store:Name="DB_Wpn">
+            <DefiningQuery>SELECT 
+            [DB_Wpn].[Wpn_ID] AS [Wpn_ID], 
+            [DB_Wpn].[Wpn_Type_ID] AS [Wpn_Type_ID], 
+            [DB_Wpn].[Wpn_Sub_ID] AS [Wpn_Sub_ID], 
+            [DB_Wpn].[Wpn_Rare] AS [Wpn_Rare], 
+            [DB_Wpn].[Wpn_Atk] AS [Wpn_Atk], 
+            [DB_Wpn].[Wpn_SpAtk1_ID] AS [Wpn_SpAtk1_ID], 
+            [DB_Wpn].[Wpn_SpAtk1_Num] AS [Wpn_SpAtk1_Num], 
+            [DB_Wpn].[Wpn_SpAtk2_ID] AS [Wpn_SpAtk2_ID], 
+            [DB_Wpn].[Wpn_SpAtk2_Num] AS [Wpn_SpAtk2_Num], 
+            [DB_Wpn].[Wpn_SpAtk_H] AS [Wpn_SpAtk_H], 
+            [DB_Wpn].[Wpn_Crit] AS [Wpn_Crit], 
+            [DB_Wpn].[Wpn_Def] AS [Wpn_Def], 
+            [DB_Wpn].[Wpn_Slot] AS [Wpn_Slot], 
+            [DB_Wpn].[Wpn_ProPx] AS [Wpn_ProPx], 
+            [DB_Wpn].[Wpn_LvUpPx] AS [Wpn_LvUpPx], 
+            [DB_Wpn].[Wpn_Sharp0_1] AS [Wpn_Sharp0_1], 
+            [DB_Wpn].[Wpn_Sharp0_2] AS [Wpn_Sharp0_2], 
+            [DB_Wpn].[Wpn_Sharp0_3] AS [Wpn_Sharp0_3], 
+            [DB_Wpn].[Wpn_Sharp0_4] AS [Wpn_Sharp0_4], 
+            [DB_Wpn].[Wpn_Sharp0_5] AS [Wpn_Sharp0_5], 
+            [DB_Wpn].[Wpn_Sharp0_6] AS [Wpn_Sharp0_6], 
+            [DB_Wpn].[Wpn_Sharp0_7] AS [Wpn_Sharp0_7], 
+            [DB_Wpn].[Wpn_Sharp0] AS [Wpn_Sharp0], 
+            [DB_Wpn].[Wpn_Sharp1_1] AS [Wpn_Sharp1_1], 
+            [DB_Wpn].[Wpn_Sharp1_2] AS [Wpn_Sharp1_2], 
+            [DB_Wpn].[Wpn_Sharp1_3] AS [Wpn_Sharp1_3], 
+            [DB_Wpn].[Wpn_Sharp1_4] AS [Wpn_Sharp1_4], 
+            [DB_Wpn].[Wpn_Sharp1_5] AS [Wpn_Sharp1_5], 
+            [DB_Wpn].[Wpn_Sharp1_6] AS [Wpn_Sharp1_6], 
+            [DB_Wpn].[Wpn_Sharp1_7] AS [Wpn_Sharp1_7], 
+            [DB_Wpn].[Wpn_Sharp1] AS [Wpn_Sharp1], 
+            [DB_Wpn].[Wpn_GLShotType_ID] AS [Wpn_GLShotType_ID], 
+            [DB_Wpn].[Wpn_SAPhial_ID] AS [Wpn_SAPhial_ID], 
+            [DB_Wpn].[Wpn_HHNote1_ID] AS [Wpn_HHNote1_ID], 
+            [DB_Wpn].[Wpn_HHNote2_ID] AS [Wpn_HHNote2_ID], 
+            [DB_Wpn].[Wpn_HHNote3_ID] AS [Wpn_HHNote3_ID], 
+            [DB_Wpn].[Wpn_GunReloadSpd_ID] AS [Wpn_GunReloadSpd_ID], 
+            [DB_Wpn].[Wpn_GunSteadiness_ID] AS [Wpn_GunSteadiness_ID], 
+            [DB_Wpn].[Wpn_GunRecoil_ID] AS [Wpn_GunRecoil_ID], 
+            [DB_Wpn].[Wpn_BowArcShot_ID] AS [Wpn_BowArcShot_ID], 
+            [DB_Wpn].[Wpn_BowShotType1_ID] AS [Wpn_BowShotType1_ID], 
+            [DB_Wpn].[Wpn_BowShotType2_ID] AS [Wpn_BowShotType2_ID], 
+            [DB_Wpn].[Wpn_BowShotType3_ID] AS [Wpn_BowShotType3_ID], 
+            [DB_Wpn].[Wpn_BowShotType4_ID] AS [Wpn_BowShotType4_ID]
+            FROM [DB_Wpn] AS [DB_Wpn]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ID_Amr_Name" EntityType="mh3uModel.Store.ID_Amr_Name" store:Type="Tables" store:Name="ID_Amr_Name">
+            <DefiningQuery>SELECT 
+            [ID_Amr_Name].[Amr_ID] AS [Amr_ID], 
+            [ID_Amr_Name].[Amr_Name_0] AS [Amr_Name_0], 
+            [ID_Amr_Name].[Amr_Name_1] AS [Amr_Name_1], 
+            [ID_Amr_Name].[Amr_Name_2] AS [Amr_Name_2], 
+            [ID_Amr_Name].[Amr_Name_3] AS [Amr_Name_3], 
+            [ID_Amr_Name].[Amr_Name_4] AS [Amr_Name_4], 
+            [ID_Amr_Name].[Amr_Name_5] AS [Amr_Name_5], 
+            [ID_Amr_Name].[Amr_Name_6] AS [Amr_Name_6], 
+            [ID_Amr_Name].[Amr_Name_7] AS [Amr_Name_7], 
+            [ID_Amr_Name].[Amr_Name_8] AS [Amr_Name_8], 
+            [ID_Amr_Name].[Amr_Name_9] AS [Amr_Name_9]
+            FROM [ID_Amr_Name] AS [ID_Amr_Name]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ID_Itm_Name" EntityType="mh3uModel.Store.ID_Itm_Name" store:Type="Tables" store:Name="ID_Itm_Name">
+            <DefiningQuery>SELECT 
+            [ID_Itm_Name].[Itm_ID] AS [Itm_ID], 
+            [ID_Itm_Name].[Itm_Name_0] AS [Itm_Name_0], 
+            [ID_Itm_Name].[Itm_Name_1] AS [Itm_Name_1], 
+            [ID_Itm_Name].[Itm_Name_2] AS [Itm_Name_2], 
+            [ID_Itm_Name].[Itm_Name_3] AS [Itm_Name_3], 
+            [ID_Itm_Name].[Itm_Name_4] AS [Itm_Name_4], 
+            [ID_Itm_Name].[Itm_Name_5] AS [Itm_Name_5], 
+            [ID_Itm_Name].[Itm_Name_6] AS [Itm_Name_6], 
+            [ID_Itm_Name].[Itm_Name_7] AS [Itm_Name_7], 
+            [ID_Itm_Name].[Itm_Name_8] AS [Itm_Name_8], 
+            [ID_Itm_Name].[Itm_Name_9] AS [Itm_Name_9]
+            FROM [ID_Itm_Name] AS [ID_Itm_Name]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ID_Wpn_Name" EntityType="mh3uModel.Store.ID_Wpn_Name" store:Type="Tables" store:Name="ID_Wpn_Name">
+            <DefiningQuery>SELECT 
+            [ID_Wpn_Name].[Wpn_ID] AS [Wpn_ID], 
+            [ID_Wpn_Name].[Wpn_Name_0] AS [Wpn_Name_0], 
+            [ID_Wpn_Name].[Wpn_Name_1] AS [Wpn_Name_1], 
+            [ID_Wpn_Name].[Wpn_Name_2] AS [Wpn_Name_2], 
+            [ID_Wpn_Name].[Wpn_Name_3] AS [Wpn_Name_3], 
+            [ID_Wpn_Name].[Wpn_Name_4] AS [Wpn_Name_4], 
+            [ID_Wpn_Name].[Wpn_Name_5] AS [Wpn_Name_5], 
+            [ID_Wpn_Name].[Wpn_Name_6] AS [Wpn_Name_6], 
+            [ID_Wpn_Name].[Wpn_Name_7] AS [Wpn_Name_7], 
+            [ID_Wpn_Name].[Wpn_Name_8] AS [Wpn_Name_8], 
+            [ID_Wpn_Name].[Wpn_Name_9] AS [Wpn_Name_9]
+            FROM [ID_Wpn_Name] AS [ID_Wpn_Name]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+            warning 6002: The table/view 'DB_Amr' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+            -->
+        <EntityType Name="DB_Amr">
+          <Key>
+            <PropertyRef Name="Amr_ID" />
+          </Key>
+          <Property Name="Amr_ID" Type="int" Nullable="false" />
+          <Property Name="Amr_BG" Type="int" />
+          <Property Name="Amr_MF" Type="int" />
+          <Property Name="Amr_Rare" Type="int" />
+          <Property Name="Amr_Part" Type="int" />
+          <Property Name="Amr_Slot" Type="int" />
+          <Property Name="Def" Type="int" />
+          <Property Name="Def_Max" Type="int" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Res_Fire" Type="int" />
+          <Property Name="Res_Water" Type="int" />
+          <Property Name="Res_Ice" Type="int" />
+          <Property Name="Res_Thunder" Type="int" />
+          <Property Name="Res_Dragon" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+            warning 6002: The table/view 'DB_Itm' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+            -->
+        <EntityType Name="DB_Itm">
+          <Key>
+            <PropertyRef Name="Itm_ID" />
+          </Key>
+          <Property Name="Itm_ID" Type="int" Nullable="false" />
+          <Property Name="Itm_Rare" Type="int" />
+          <Property Name="Itm_Max" Type="int" />
+          <Property Name="Itm_Sell" Type="int" />
+          <Property Name="Itm_Buy" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+            warning 6002: The table/view 'DB_Itm_Amr' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+            -->
+        <EntityType Name="DB_Itm_Amr">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Amr_ID" Type="int" />
+          <Property Name="Itm_ID" Type="int" />
+          <Property Name="Quant" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+            warning 6002: The table/view 'DB_Itm_Wpn' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+            -->
+        <EntityType Name="DB_Itm_Wpn">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Wpn_ID" Type="int" />
+          <Property Name="Itm_ID" Type="int" />
+          <Property Name="Quant" Type="int" />
+          <Property Name="Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Region" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+            warning 6002: The table/view 'DB_Wpn' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+            -->
+        <EntityType Name="DB_Wpn">
+          <Key>
+            <PropertyRef Name="Wpn_ID" />
+          </Key>
+          <Property Name="Wpn_ID" Type="int" Nullable="false" />
+          <Property Name="Wpn_Type_ID" Type="int" />
+          <Property Name="Wpn_Sub_ID" Type="int" />
+          <Property Name="Wpn_Rare" Type="int" />
+          <Property Name="Wpn_Atk" Type="int" />
+          <Property Name="Wpn_SpAtk1_ID" Type="int" />
+          <Property Name="Wpn_SpAtk1_Num" Type="int" />
+          <Property Name="Wpn_SpAtk2_ID" Type="int" />
+          <Property Name="Wpn_SpAtk2_Num" Type="int" />
+          <Property Name="Wpn_SpAtk_H" Type="int" />
+          <Property Name="Wpn_Crit" Type="float" />
+          <Property Name="Wpn_Def" Type="int" />
+          <Property Name="Wpn_Slot" Type="int" />
+          <Property Name="Wpn_ProPx" Type="int" />
+          <Property Name="Wpn_LvUpPx" Type="int" />
+          <Property Name="Wpn_Sharp0_1" Type="int" />
+          <Property Name="Wpn_Sharp0_2" Type="int" />
+          <Property Name="Wpn_Sharp0_3" Type="int" />
+          <Property Name="Wpn_Sharp0_4" Type="int" />
+          <Property Name="Wpn_Sharp0_5" Type="int" />
+          <Property Name="Wpn_Sharp0_6" Type="int" />
+          <Property Name="Wpn_Sharp0_7" Type="int" />
+          <Property Name="Wpn_Sharp0" Type="int" />
+          <Property Name="Wpn_Sharp1_1" Type="int" />
+          <Property Name="Wpn_Sharp1_2" Type="int" />
+          <Property Name="Wpn_Sharp1_3" Type="int" />
+          <Property Name="Wpn_Sharp1_4" Type="int" />
+          <Property Name="Wpn_Sharp1_5" Type="int" />
+          <Property Name="Wpn_Sharp1_6" Type="int" />
+          <Property Name="Wpn_Sharp1_7" Type="int" />
+          <Property Name="Wpn_Sharp1" Type="int" />
+          <Property Name="Wpn_GLShotType_ID" Type="int" />
+          <Property Name="Wpn_SAPhial_ID" Type="int" />
+          <Property Name="Wpn_HHNote1_ID" Type="int" />
+          <Property Name="Wpn_HHNote2_ID" Type="int" />
+          <Property Name="Wpn_HHNote3_ID" Type="int" />
+          <Property Name="Wpn_GunReloadSpd_ID" Type="int" />
+          <Property Name="Wpn_GunSteadiness_ID" Type="int" />
+          <Property Name="Wpn_GunRecoil_ID" Type="int" />
+          <Property Name="Wpn_BowArcShot_ID" Type="int" />
+          <Property Name="Wpn_BowShotType1_ID" Type="int" />
+          <Property Name="Wpn_BowShotType2_ID" Type="int" />
+          <Property Name="Wpn_BowShotType3_ID" Type="int" />
+          <Property Name="Wpn_BowShotType4_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+            warning 6002: The table/view 'ID_Amr_Name' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+            -->
+        <EntityType Name="ID_Amr_Name">
+          <Key>
+            <PropertyRef Name="Amr_ID" />
+          </Key>
+          <Property Name="Amr_ID" Type="int" Nullable="false" />
+          <Property Name="Amr_Name_0" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amr_Name_1" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amr_Name_2" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amr_Name_3" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amr_Name_4" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amr_Name_5" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amr_Name_6" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amr_Name_7" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amr_Name_8" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amr_Name_9" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+            warning 6002: The table/view 'ID_Itm_Name' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+            -->
+        <EntityType Name="ID_Itm_Name">
+          <Key>
+            <PropertyRef Name="Itm_ID" />
+          </Key>
+          <Property Name="Itm_ID" Type="int" Nullable="false" />
+          <Property Name="Itm_Name_0" Type="nvarchar" MaxLength="255" />
+          <Property Name="Itm_Name_1" Type="nvarchar" MaxLength="255" />
+          <Property Name="Itm_Name_2" Type="nvarchar" MaxLength="255" />
+          <Property Name="Itm_Name_3" Type="nvarchar" MaxLength="255" />
+          <Property Name="Itm_Name_4" Type="nvarchar" MaxLength="255" />
+          <Property Name="Itm_Name_5" Type="nvarchar" MaxLength="255" />
+          <Property Name="Itm_Name_6" Type="nvarchar" MaxLength="255" />
+          <Property Name="Itm_Name_7" Type="nvarchar" MaxLength="255" />
+          <Property Name="Itm_Name_8" Type="nvarchar" MaxLength="255" />
+          <Property Name="Itm_Name_9" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+            warning 6002: The table/view 'ID_Wpn_Name' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+            -->
+        <EntityType Name="ID_Wpn_Name">
+          <Key>
+            <PropertyRef Name="Wpn_ID" />
+          </Key>
+          <Property Name="Wpn_ID" Type="int" Nullable="false" />
+          <Property Name="Wpn_Name_0" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wpn_Name_1" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wpn_Name_2" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wpn_Name_3" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wpn_Name_4" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wpn_Name_5" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wpn_Name_6" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wpn_Name_7" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wpn_Name_8" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wpn_Name_9" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mh3uModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="mh3uEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="DB_Amr" EntityType="mh3uModel.DB_Amr" />
+          <EntitySet Name="DB_Itm" EntityType="mh3uModel.DB_Itm" />
+          <EntitySet Name="DB_Itm_Amr" EntityType="mh3uModel.DB_Itm_Amr" />
+          <EntitySet Name="DB_Itm_Wpn" EntityType="mh3uModel.DB_Itm_Wpn" />
+          <EntitySet Name="DB_Wpn" EntityType="mh3uModel.DB_Wpn" />
+          <EntitySet Name="ID_Amr_Name" EntityType="mh3uModel.ID_Amr_Name" />
+          <EntitySet Name="ID_Itm_Name" EntityType="mh3uModel.ID_Itm_Name" />
+          <EntitySet Name="ID_Wpn_Name" EntityType="mh3uModel.ID_Wpn_Name" />
+          <AssociationSet Name="DB_AmrDB_Itm_Amr" Association="mh3uModel.DB_AmrDB_Itm_Amr">
+            <End Role="DB_Amr" EntitySet="DB_Amr" />
+            <End Role="DB_Itm_Amr" EntitySet="DB_Itm_Amr" />
+          </AssociationSet>
+          <AssociationSet Name="DB_AmrID_Amr_Name" Association="mh3uModel.DB_AmrID_Amr_Name">
+            <End Role="DB_Amr" EntitySet="DB_Amr" />
+            <End Role="ID_Amr_Name" EntitySet="ID_Amr_Name" />
+          </AssociationSet>
+          <AssociationSet Name="DB_ItmDB_Itm_Amr" Association="mh3uModel.DB_ItmDB_Itm_Amr">
+            <End Role="DB_Itm" EntitySet="DB_Itm" />
+            <End Role="DB_Itm_Amr" EntitySet="DB_Itm_Amr" />
+          </AssociationSet>
+          <AssociationSet Name="DB_ItmDB_Itm_Wpn" Association="mh3uModel.DB_ItmDB_Itm_Wpn">
+            <End Role="DB_Itm" EntitySet="DB_Itm" />
+            <End Role="DB_Itm_Wpn" EntitySet="DB_Itm_Wpn" />
+          </AssociationSet>
+          <AssociationSet Name="DB_ItmID_Itm_Name" Association="mh3uModel.DB_ItmID_Itm_Name">
+            <End Role="DB_Itm" EntitySet="DB_Itm" />
+            <End Role="ID_Itm_Name" EntitySet="ID_Itm_Name" />
+          </AssociationSet>
+          <AssociationSet Name="DB_WpnDB_Itm_Wpn" Association="mh3uModel.DB_WpnDB_Itm_Wpn">
+            <End Role="DB_Wpn" EntitySet="DB_Wpn" />
+            <End Role="DB_Itm_Wpn" EntitySet="DB_Itm_Wpn" />
+          </AssociationSet>
+          <AssociationSet Name="DB_WpnID_Wpn_Name" Association="mh3uModel.DB_WpnID_Wpn_Name">
+            <End Role="DB_Wpn" EntitySet="DB_Wpn" />
+            <End Role="ID_Wpn_Name" EntitySet="ID_Wpn_Name" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DB_Amr">
+          <Key>
+            <PropertyRef Name="Amr_ID" />
+          </Key>
+          <Property Name="Amr_ID" Type="Int32" Nullable="false" />
+          <Property Name="Amr_BG" Type="Int32" />
+          <Property Name="Amr_MF" Type="Int32" />
+          <Property Name="Amr_Rare" Type="Int32" />
+          <Property Name="Amr_Part" Type="Int32" />
+          <Property Name="Amr_Slot" Type="Int32" />
+          <Property Name="Def" Type="Int32" />
+          <Property Name="Def_Max" Type="Int32" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Res_Fire" Type="Int32" />
+          <Property Name="Res_Water" Type="Int32" />
+          <Property Name="Res_Ice" Type="Int32" />
+          <Property Name="Res_Thunder" Type="Int32" />
+          <Property Name="Res_Dragon" Type="Int32" />
+          <NavigationProperty Name="DB_Itm_Amr" Relationship="mh3uModel.DB_AmrDB_Itm_Amr" FromRole="DB_Amr" ToRole="DB_Itm_Amr" />
+          <NavigationProperty Name="ID_Amr_Name" Relationship="mh3uModel.DB_AmrID_Amr_Name" FromRole="DB_Amr" ToRole="ID_Amr_Name" />
+        </EntityType>
+        <EntityType Name="DB_Itm">
+          <Key>
+            <PropertyRef Name="Itm_ID" />
+          </Key>
+          <Property Name="Itm_ID" Type="Int32" Nullable="false" />
+          <Property Name="Itm_Rare" Type="Int32" />
+          <Property Name="Itm_Max" Type="Int32" />
+          <Property Name="Itm_Sell" Type="Int32" />
+          <Property Name="Itm_Buy" Type="Int32" />
+          <NavigationProperty Name="DB_Itm_Amr" Relationship="mh3uModel.DB_ItmDB_Itm_Amr" FromRole="DB_Itm" ToRole="DB_Itm_Amr" />
+          <NavigationProperty Name="DB_Itm_Wpn" Relationship="mh3uModel.DB_ItmDB_Itm_Wpn" FromRole="DB_Itm" ToRole="DB_Itm_Wpn" />
+          <NavigationProperty Name="ID_Itm_Name" Relationship="mh3uModel.DB_ItmID_Itm_Name" FromRole="DB_Itm" ToRole="ID_Itm_Name" />
+        </EntityType>
+        <EntityType Name="DB_Itm_Amr">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Amr_ID" Type="Int32" />
+          <Property Name="Itm_ID" Type="Int32" />
+          <Property Name="Quant" Type="Int32" />
+          <NavigationProperty Name="DB_Amr" Relationship="mh3uModel.DB_AmrDB_Itm_Amr" FromRole="DB_Itm_Amr" ToRole="DB_Amr" />
+          <NavigationProperty Name="DB_Itm" Relationship="mh3uModel.DB_ItmDB_Itm_Amr" FromRole="DB_Itm_Amr" ToRole="DB_Itm" />
+        </EntityType>
+        <EntityType Name="DB_Itm_Wpn">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Wpn_ID" Type="Int32" />
+          <Property Name="Itm_ID" Type="Int32" />
+          <Property Name="Quant" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Region" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DB_Itm" Relationship="mh3uModel.DB_ItmDB_Itm_Wpn" FromRole="DB_Itm_Wpn" ToRole="DB_Itm" />
+          <NavigationProperty Name="DB_Wpn" Relationship="mh3uModel.DB_WpnDB_Itm_Wpn" FromRole="DB_Itm_Wpn" ToRole="DB_Wpn" />
+        </EntityType>
+        <EntityType Name="DB_Wpn">
+          <Key>
+            <PropertyRef Name="Wpn_ID" />
+          </Key>
+          <Property Name="Wpn_ID" Type="Int32" Nullable="false" />
+          <Property Name="Wpn_Type_ID" Type="Int32" />
+          <Property Name="Wpn_Sub_ID" Type="Int32" />
+          <Property Name="Wpn_Rare" Type="Int32" />
+          <Property Name="Wpn_Atk" Type="Int32" />
+          <Property Name="Wpn_SpAtk1_ID" Type="Int32" />
+          <Property Name="Wpn_SpAtk1_Num" Type="Int32" />
+          <Property Name="Wpn_SpAtk2_ID" Type="Int32" />
+          <Property Name="Wpn_SpAtk2_Num" Type="Int32" />
+          <Property Name="Wpn_SpAtk_H" Type="Int32" />
+          <Property Name="Wpn_Crit" Type="Double" />
+          <Property Name="Wpn_Def" Type="Int32" />
+          <Property Name="Wpn_Slot" Type="Int32" />
+          <Property Name="Wpn_ProPx" Type="Int32" />
+          <Property Name="Wpn_LvUpPx" Type="Int32" />
+          <Property Name="Wpn_Sharp0_1" Type="Int32" />
+          <Property Name="Wpn_Sharp0_2" Type="Int32" />
+          <Property Name="Wpn_Sharp0_3" Type="Int32" />
+          <Property Name="Wpn_Sharp0_4" Type="Int32" />
+          <Property Name="Wpn_Sharp0_5" Type="Int32" />
+          <Property Name="Wpn_Sharp0_6" Type="Int32" />
+          <Property Name="Wpn_Sharp0_7" Type="Int32" />
+          <Property Name="Wpn_Sharp0" Type="Int32" />
+          <Property Name="Wpn_Sharp1_1" Type="Int32" />
+          <Property Name="Wpn_Sharp1_2" Type="Int32" />
+          <Property Name="Wpn_Sharp1_3" Type="Int32" />
+          <Property Name="Wpn_Sharp1_4" Type="Int32" />
+          <Property Name="Wpn_Sharp1_5" Type="Int32" />
+          <Property Name="Wpn_Sharp1_6" Type="Int32" />
+          <Property Name="Wpn_Sharp1_7" Type="Int32" />
+          <Property Name="Wpn_Sharp1" Type="Int32" />
+          <Property Name="Wpn_GLShotType_ID" Type="Int32" />
+          <Property Name="Wpn_SAPhial_ID" Type="Int32" />
+          <Property Name="Wpn_HHNote1_ID" Type="Int32" />
+          <Property Name="Wpn_HHNote2_ID" Type="Int32" />
+          <Property Name="Wpn_HHNote3_ID" Type="Int32" />
+          <Property Name="Wpn_GunReloadSpd_ID" Type="Int32" />
+          <Property Name="Wpn_GunSteadiness_ID" Type="Int32" />
+          <Property Name="Wpn_GunRecoil_ID" Type="Int32" />
+          <Property Name="Wpn_BowArcShot_ID" Type="Int32" />
+          <Property Name="Wpn_BowShotType1_ID" Type="Int32" />
+          <Property Name="Wpn_BowShotType2_ID" Type="Int32" />
+          <Property Name="Wpn_BowShotType3_ID" Type="Int32" />
+          <Property Name="Wpn_BowShotType4_ID" Type="Int32" />
+          <NavigationProperty Name="DB_Itm_Wpn" Relationship="mh3uModel.DB_WpnDB_Itm_Wpn" FromRole="DB_Wpn" ToRole="DB_Itm_Wpn" />
+          <NavigationProperty Name="ID_Wpn_Name" Relationship="mh3uModel.DB_WpnID_Wpn_Name" FromRole="DB_Wpn" ToRole="ID_Wpn_Name" />
+        </EntityType>
+        <EntityType Name="ID_Amr_Name">
+          <Key>
+            <PropertyRef Name="Amr_ID" />
+          </Key>
+          <Property Name="Amr_ID" Type="Int32" Nullable="false" />
+          <Property Name="Amr_Name_0" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Amr_Name_1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Amr_Name_2" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Amr_Name_3" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Amr_Name_4" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Amr_Name_5" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Amr_Name_6" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Amr_Name_7" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Amr_Name_8" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Amr_Name_9" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DB_Amr" Relationship="mh3uModel.DB_AmrID_Amr_Name" FromRole="ID_Amr_Name" ToRole="DB_Amr" />
+        </EntityType>
+        <EntityType Name="ID_Itm_Name">
+          <Key>
+            <PropertyRef Name="Itm_ID" />
+          </Key>
+          <Property Name="Itm_ID" Type="Int32" Nullable="false" />
+          <Property Name="Itm_Name_0" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Itm_Name_1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Itm_Name_2" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Itm_Name_3" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Itm_Name_4" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Itm_Name_5" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Itm_Name_6" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Itm_Name_7" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Itm_Name_8" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Itm_Name_9" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DB_Itm" Relationship="mh3uModel.DB_ItmID_Itm_Name" FromRole="ID_Itm_Name" ToRole="DB_Itm" />
+        </EntityType>
+        <EntityType Name="ID_Wpn_Name">
+          <Key>
+            <PropertyRef Name="Wpn_ID" />
+          </Key>
+          <Property Name="Wpn_ID" Type="Int32" Nullable="false" />
+          <Property Name="Wpn_Name_0" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wpn_Name_1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wpn_Name_2" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wpn_Name_3" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wpn_Name_4" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wpn_Name_5" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wpn_Name_6" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wpn_Name_7" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wpn_Name_8" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wpn_Name_9" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DB_Wpn" Relationship="mh3uModel.DB_WpnID_Wpn_Name" FromRole="ID_Wpn_Name" ToRole="DB_Wpn" />
+        </EntityType>
+        <Association Name="DB_AmrDB_Itm_Amr">
+          <End Type="mh3uModel.DB_Amr" Role="DB_Amr" Multiplicity="0..1" />
+          <End Type="mh3uModel.DB_Itm_Amr" Role="DB_Itm_Amr" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DB_Amr">
+              <PropertyRef Name="Amr_ID" />
+            </Principal>
+            <Dependent Role="DB_Itm_Amr">
+              <PropertyRef Name="Amr_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DB_AmrID_Amr_Name">
+          <End Type="mh3uModel.DB_Amr" Role="DB_Amr" Multiplicity="1" />
+          <End Type="mh3uModel.ID_Amr_Name" Role="ID_Amr_Name" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="DB_Amr">
+              <PropertyRef Name="Amr_ID" />
+            </Principal>
+            <Dependent Role="ID_Amr_Name">
+              <PropertyRef Name="Amr_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DB_ItmDB_Itm_Amr">
+          <End Type="mh3uModel.DB_Itm" Role="DB_Itm" Multiplicity="0..1" />
+          <End Type="mh3uModel.DB_Itm_Amr" Role="DB_Itm_Amr" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DB_Itm">
+              <PropertyRef Name="Itm_ID" />
+            </Principal>
+            <Dependent Role="DB_Itm_Amr">
+              <PropertyRef Name="Itm_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DB_ItmDB_Itm_Wpn">
+          <End Type="mh3uModel.DB_Itm" Role="DB_Itm" Multiplicity="0..1" />
+          <End Type="mh3uModel.DB_Itm_Wpn" Role="DB_Itm_Wpn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DB_Itm">
+              <PropertyRef Name="Itm_ID" />
+            </Principal>
+            <Dependent Role="DB_Itm_Wpn">
+              <PropertyRef Name="Itm_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DB_ItmID_Itm_Name">
+          <End Type="mh3uModel.DB_Itm" Role="DB_Itm" Multiplicity="1" />
+          <End Type="mh3uModel.ID_Itm_Name" Role="ID_Itm_Name" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="DB_Itm">
+              <PropertyRef Name="Itm_ID" />
+            </Principal>
+            <Dependent Role="ID_Itm_Name">
+              <PropertyRef Name="Itm_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DB_WpnDB_Itm_Wpn">
+          <End Type="mh3uModel.DB_Wpn" Role="DB_Wpn" Multiplicity="0..1" />
+          <End Type="mh3uModel.DB_Itm_Wpn" Role="DB_Itm_Wpn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DB_Wpn">
+              <PropertyRef Name="Wpn_ID" />
+            </Principal>
+            <Dependent Role="DB_Itm_Wpn">
+              <PropertyRef Name="Wpn_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DB_WpnID_Wpn_Name">
+          <End Type="mh3uModel.DB_Wpn" Role="DB_Wpn" Multiplicity="1" />
+          <End Type="mh3uModel.ID_Wpn_Name" Role="ID_Wpn_Name" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="DB_Wpn">
+              <PropertyRef Name="Wpn_ID" />
+            </Principal>
+            <Dependent Role="ID_Wpn_Name">
+              <PropertyRef Name="Wpn_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mh3uModelStoreContainer" CdmEntityContainer="mh3uEntities">
+          <EntitySetMapping Name="DB_Amr">
+            <EntityTypeMapping TypeName="mh3uModel.DB_Amr">
+              <MappingFragment StoreEntitySet="DB_Amr">
+                <ScalarProperty Name="Amr_ID" ColumnName="Amr_ID" />
+                <ScalarProperty Name="Amr_BG" ColumnName="Amr_BG" />
+                <ScalarProperty Name="Amr_MF" ColumnName="Amr_MF" />
+                <ScalarProperty Name="Amr_Rare" ColumnName="Amr_Rare" />
+                <ScalarProperty Name="Amr_Part" ColumnName="Amr_Part" />
+                <ScalarProperty Name="Amr_Slot" ColumnName="Amr_Slot" />
+                <ScalarProperty Name="Def" ColumnName="Def" />
+                <ScalarProperty Name="Def_Max" ColumnName="Def_Max" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Res_Fire" ColumnName="Res_Fire" />
+                <ScalarProperty Name="Res_Water" ColumnName="Res_Water" />
+                <ScalarProperty Name="Res_Ice" ColumnName="Res_Ice" />
+                <ScalarProperty Name="Res_Thunder" ColumnName="Res_Thunder" />
+                <ScalarProperty Name="Res_Dragon" ColumnName="Res_Dragon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DB_Itm">
+            <EntityTypeMapping TypeName="mh3uModel.DB_Itm">
+              <MappingFragment StoreEntitySet="DB_Itm">
+                <ScalarProperty Name="Itm_ID" ColumnName="Itm_ID" />
+                <ScalarProperty Name="Itm_Rare" ColumnName="Itm_Rare" />
+                <ScalarProperty Name="Itm_Max" ColumnName="Itm_Max" />
+                <ScalarProperty Name="Itm_Sell" ColumnName="Itm_Sell" />
+                <ScalarProperty Name="Itm_Buy" ColumnName="Itm_Buy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DB_Itm_Amr">
+            <EntityTypeMapping TypeName="mh3uModel.DB_Itm_Amr">
+              <MappingFragment StoreEntitySet="DB_Itm_Amr">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Amr_ID" ColumnName="Amr_ID" />
+                <ScalarProperty Name="Itm_ID" ColumnName="Itm_ID" />
+                <ScalarProperty Name="Quant" ColumnName="Quant" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DB_Itm_Wpn">
+            <EntityTypeMapping TypeName="mh3uModel.DB_Itm_Wpn">
+              <MappingFragment StoreEntitySet="DB_Itm_Wpn">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Wpn_ID" ColumnName="Wpn_ID" />
+                <ScalarProperty Name="Itm_ID" ColumnName="Itm_ID" />
+                <ScalarProperty Name="Quant" ColumnName="Quant" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DB_Wpn">
+            <EntityTypeMapping TypeName="mh3uModel.DB_Wpn">
+              <MappingFragment StoreEntitySet="DB_Wpn">
+                <ScalarProperty Name="Wpn_ID" ColumnName="Wpn_ID" />
+                <ScalarProperty Name="Wpn_Type_ID" ColumnName="Wpn_Type_ID" />
+                <ScalarProperty Name="Wpn_Sub_ID" ColumnName="Wpn_Sub_ID" />
+                <ScalarProperty Name="Wpn_Rare" ColumnName="Wpn_Rare" />
+                <ScalarProperty Name="Wpn_Atk" ColumnName="Wpn_Atk" />
+                <ScalarProperty Name="Wpn_SpAtk1_ID" ColumnName="Wpn_SpAtk1_ID" />
+                <ScalarProperty Name="Wpn_SpAtk1_Num" ColumnName="Wpn_SpAtk1_Num" />
+                <ScalarProperty Name="Wpn_SpAtk2_ID" ColumnName="Wpn_SpAtk2_ID" />
+                <ScalarProperty Name="Wpn_SpAtk2_Num" ColumnName="Wpn_SpAtk2_Num" />
+                <ScalarProperty Name="Wpn_SpAtk_H" ColumnName="Wpn_SpAtk_H" />
+                <ScalarProperty Name="Wpn_Crit" ColumnName="Wpn_Crit" />
+                <ScalarProperty Name="Wpn_Def" ColumnName="Wpn_Def" />
+                <ScalarProperty Name="Wpn_Slot" ColumnName="Wpn_Slot" />
+                <ScalarProperty Name="Wpn_ProPx" ColumnName="Wpn_ProPx" />
+                <ScalarProperty Name="Wpn_LvUpPx" ColumnName="Wpn_LvUpPx" />
+                <ScalarProperty Name="Wpn_Sharp0_1" ColumnName="Wpn_Sharp0_1" />
+                <ScalarProperty Name="Wpn_Sharp0_2" ColumnName="Wpn_Sharp0_2" />
+                <ScalarProperty Name="Wpn_Sharp0_3" ColumnName="Wpn_Sharp0_3" />
+                <ScalarProperty Name="Wpn_Sharp0_4" ColumnName="Wpn_Sharp0_4" />
+                <ScalarProperty Name="Wpn_Sharp0_5" ColumnName="Wpn_Sharp0_5" />
+                <ScalarProperty Name="Wpn_Sharp0_6" ColumnName="Wpn_Sharp0_6" />
+                <ScalarProperty Name="Wpn_Sharp0_7" ColumnName="Wpn_Sharp0_7" />
+                <ScalarProperty Name="Wpn_Sharp0" ColumnName="Wpn_Sharp0" />
+                <ScalarProperty Name="Wpn_Sharp1_1" ColumnName="Wpn_Sharp1_1" />
+                <ScalarProperty Name="Wpn_Sharp1_2" ColumnName="Wpn_Sharp1_2" />
+                <ScalarProperty Name="Wpn_Sharp1_3" ColumnName="Wpn_Sharp1_3" />
+                <ScalarProperty Name="Wpn_Sharp1_4" ColumnName="Wpn_Sharp1_4" />
+                <ScalarProperty Name="Wpn_Sharp1_5" ColumnName="Wpn_Sharp1_5" />
+                <ScalarProperty Name="Wpn_Sharp1_6" ColumnName="Wpn_Sharp1_6" />
+                <ScalarProperty Name="Wpn_Sharp1_7" ColumnName="Wpn_Sharp1_7" />
+                <ScalarProperty Name="Wpn_Sharp1" ColumnName="Wpn_Sharp1" />
+                <ScalarProperty Name="Wpn_GLShotType_ID" ColumnName="Wpn_GLShotType_ID" />
+                <ScalarProperty Name="Wpn_SAPhial_ID" ColumnName="Wpn_SAPhial_ID" />
+                <ScalarProperty Name="Wpn_HHNote1_ID" ColumnName="Wpn_HHNote1_ID" />
+                <ScalarProperty Name="Wpn_HHNote2_ID" ColumnName="Wpn_HHNote2_ID" />
+                <ScalarProperty Name="Wpn_HHNote3_ID" ColumnName="Wpn_HHNote3_ID" />
+                <ScalarProperty Name="Wpn_GunReloadSpd_ID" ColumnName="Wpn_GunReloadSpd_ID" />
+                <ScalarProperty Name="Wpn_GunSteadiness_ID" ColumnName="Wpn_GunSteadiness_ID" />
+                <ScalarProperty Name="Wpn_GunRecoil_ID" ColumnName="Wpn_GunRecoil_ID" />
+                <ScalarProperty Name="Wpn_BowArcShot_ID" ColumnName="Wpn_BowArcShot_ID" />
+                <ScalarProperty Name="Wpn_BowShotType1_ID" ColumnName="Wpn_BowShotType1_ID" />
+                <ScalarProperty Name="Wpn_BowShotType2_ID" ColumnName="Wpn_BowShotType2_ID" />
+                <ScalarProperty Name="Wpn_BowShotType3_ID" ColumnName="Wpn_BowShotType3_ID" />
+                <ScalarProperty Name="Wpn_BowShotType4_ID" ColumnName="Wpn_BowShotType4_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ID_Amr_Name">
+            <EntityTypeMapping TypeName="mh3uModel.ID_Amr_Name">
+              <MappingFragment StoreEntitySet="ID_Amr_Name">
+                <ScalarProperty Name="Amr_ID" ColumnName="Amr_ID" />
+                <ScalarProperty Name="Amr_Name_0" ColumnName="Amr_Name_0" />
+                <ScalarProperty Name="Amr_Name_1" ColumnName="Amr_Name_1" />
+                <ScalarProperty Name="Amr_Name_2" ColumnName="Amr_Name_2" />
+                <ScalarProperty Name="Amr_Name_3" ColumnName="Amr_Name_3" />
+                <ScalarProperty Name="Amr_Name_4" ColumnName="Amr_Name_4" />
+                <ScalarProperty Name="Amr_Name_5" ColumnName="Amr_Name_5" />
+                <ScalarProperty Name="Amr_Name_6" ColumnName="Amr_Name_6" />
+                <ScalarProperty Name="Amr_Name_7" ColumnName="Amr_Name_7" />
+                <ScalarProperty Name="Amr_Name_8" ColumnName="Amr_Name_8" />
+                <ScalarProperty Name="Amr_Name_9" ColumnName="Amr_Name_9" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ID_Itm_Name">
+            <EntityTypeMapping TypeName="mh3uModel.ID_Itm_Name">
+              <MappingFragment StoreEntitySet="ID_Itm_Name">
+                <ScalarProperty Name="Itm_ID" ColumnName="Itm_ID" />
+                <ScalarProperty Name="Itm_Name_0" ColumnName="Itm_Name_0" />
+                <ScalarProperty Name="Itm_Name_1" ColumnName="Itm_Name_1" />
+                <ScalarProperty Name="Itm_Name_2" ColumnName="Itm_Name_2" />
+                <ScalarProperty Name="Itm_Name_3" ColumnName="Itm_Name_3" />
+                <ScalarProperty Name="Itm_Name_4" ColumnName="Itm_Name_4" />
+                <ScalarProperty Name="Itm_Name_5" ColumnName="Itm_Name_5" />
+                <ScalarProperty Name="Itm_Name_6" ColumnName="Itm_Name_6" />
+                <ScalarProperty Name="Itm_Name_7" ColumnName="Itm_Name_7" />
+                <ScalarProperty Name="Itm_Name_8" ColumnName="Itm_Name_8" />
+                <ScalarProperty Name="Itm_Name_9" ColumnName="Itm_Name_9" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ID_Wpn_Name">
+            <EntityTypeMapping TypeName="mh3uModel.ID_Wpn_Name">
+              <MappingFragment StoreEntitySet="ID_Wpn_Name">
+                <ScalarProperty Name="Wpn_ID" ColumnName="Wpn_ID" />
+                <ScalarProperty Name="Wpn_Name_0" ColumnName="Wpn_Name_0" />
+                <ScalarProperty Name="Wpn_Name_1" ColumnName="Wpn_Name_1" />
+                <ScalarProperty Name="Wpn_Name_2" ColumnName="Wpn_Name_2" />
+                <ScalarProperty Name="Wpn_Name_3" ColumnName="Wpn_Name_3" />
+                <ScalarProperty Name="Wpn_Name_4" ColumnName="Wpn_Name_4" />
+                <ScalarProperty Name="Wpn_Name_5" ColumnName="Wpn_Name_5" />
+                <ScalarProperty Name="Wpn_Name_6" ColumnName="Wpn_Name_6" />
+                <ScalarProperty Name="Wpn_Name_7" ColumnName="Wpn_Name_7" />
+                <ScalarProperty Name="Wpn_Name_8" ColumnName="Wpn_Name_8" />
+                <ScalarProperty Name="Wpn_Name_9" ColumnName="Wpn_Name_9" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
